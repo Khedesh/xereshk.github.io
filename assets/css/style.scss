@@ -31,6 +31,10 @@ $font-stack: 'Vazir', Helvetica;
 body {
 	font-family: $font-stack;
 	direction: rtl;
+
+	.language-markdown {
+		direction: ltr;
+	}
 }
 
 

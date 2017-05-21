@@ -12,6 +12,22 @@ MRO
 object 
 ارث‌بری انجام شود.
 
+برای مثال در کد زیر مسیری که
+MRO 
+تعیین می کند برابر 
+C, A, B
+است.
+
+```markdown
+
+class A :
+    pass
+class B :
+    pass
+class C(A, B) :
+    pass
+    
+```
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

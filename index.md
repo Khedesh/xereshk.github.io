@@ -93,42 +93,67 @@ B
 در الگوریتم جدید تغییراتی در روند پرمایش گراف ارث‌بری به وجود آمده که باعث می‌شود ترتیب جست‌وجو برای پیدا کردن تابع موردنظر تغییر یابد.
 
 تابعی که ترتیب جدید را به دست می‌دهد را تابع «خطی‌سازی» می‌نامیم. عنصر اول خروجی سر آن و باقی اعضا را دم آن می‌نامیم. تایع خطی سازی را به صورت زیر تعریف می‌کنیم:
-تابع خطی‌سازی کلاس) 
+(تابع خطی‌سازی کلاس
 C 
 را محاسبه می‌کنیم در حالی که از کلاس‌های 
-B_1, ..., B_n
+B1, ..., BN
 ارث‌بری می کند.)
 
-L[C] = C + merge(L[B_1], L[B_2], ..., L[B_n], B_1, B_2, ..., B_n)
+L[C] = C + merge(L[B1], L[B2], ..., L[BN], B1, B2, ..., BN)
 
-### Markdown
+حال کافیست تا تابع 
+merge
+را تعریف کنیم.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+تابع 
+merge
+به این صورت کار می‌کند که از سر 
+L[B1]
+شروع می کند و در صورتی که سر آن در دم هیچ یک از دیگر لیست های ورودی تابع نباشد آن را از سر آن حذف  کرده و به انتهای لیست خروجی برای خطی‌سازی 
+C  
+اضافه می‌کند. اما در صورتی که سر آن در دم لیست دیگری یافت شود به سراغ لیست دیگر می‌رود.
+این روند تا زمانی ادامه پیدا می‌کند که همه کلاس‌ها تمام شود یا دیگر نتوانیم ادامه دهیم.
+اگر به جایی برسیم که نتوانیم ادامه دهیم پایتون با نشان دادن خطایی از به وجود آمدن کلاس مورد نظر جلوگیری می‌کند.
 
+### مثالی از این‌که نتوانیم کلاس را تشکیل دهیم
+
+کد زیر را در نظر بگیرید:
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+>>> O = object
+>>> class Y(O): pass
+>>> class X(O): pass
+>>> class B(X,Y): pass
+>>> class A(X,Y): pass
+>>> class C(A,B): pass
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+در نتیجه:
+```markdown
+L[O] = 0
+L[X] = X O
+L[Y] = Y O
+L[A] = A X Y O
+L[B] = B Y X O
+```
+حال مقدار
+L[C]
+را محاسبه می‌کنیم:
 
-### Jekyll Themes
+```markdown
+L[C] = C + merge(AXYO, BYXO, AB)
+     = C + A + merge(XYO, BYXO, B)
+     = C + A + B + merge(XYO, YXO)
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Khedesh/xereshk.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+ همانطور که ملاحظه می‌شود
+ X 
+ که سر لیست اول است در دم لیست بعدی و 
+ Y 
+ که در لیست دوم است در دم لیست دیگر قرار دارد و به بن‌بست رسیدیم.
+ لذا دیگر نمی‌توانیم ادامه دهیم.
+و پایتون اجازه تشکیل کلاس را نمی‌دهد.
+### منابع
+```markdown
+[Makina](https://makina-corpus.com/blog/metier/2014/python-tutorial-understanding-python-mro-class-search-path)
+[Python Docs](https://www.python.org/download/releases/2.3/mro/)
+```

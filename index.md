@@ -35,6 +35,44 @@ class B(object) :
     pass
 ```
 
+#### توضیح الگوریتم قدیمی
+با مثال زیر آغاز می‌کنیم:
+```markdown
+class A:
+    def who_am_i(self):
+        print("I am a A")
+
+class B(A):
+    def who_am_i(self):
+        print("I am a B")
+
+class C(A):
+    def who_am_i(self):
+        print("I am a C")
+
+class D(B,C):
+    def who_am_i(self):
+        print("I am a D")
+
+d1 = D()
+d1.who_am_i()
+```
+پس از اجرای کد بالا در پایتون ۲ خواهیم داشت:
+
+```markdown
+$ python2 Python-MRO.py  
+I am a D
+```
+پس از کامنت‌کردن کد 
+D خواهیم داشت:
+
+```markdown
+class D(B,C):
+\#    def who_am_i(self):
+\#        print("I am a D")
+    pass
+```
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

@@ -1,9 +1,9 @@
 theme: jekyll-theme-merlot
 @font-face {
- 10   font-family: 'Vazir';
- 11   src: url('fonts/Vazir.eot'); /* IE9 Compat Modes */
- 12   src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
- 13        url('fonts/Vazir.woff') format('woff'), /* Pretty Modern Browsers */
- 14        url('fonts/Vazir.ttf')  format('truetype'); /* Safari, Android, iOS */
- 15 }
+ font-family: 'Vazir';
+ src: url('fonts/Vazir.eot'); /* IE9 Compat Modes */
+ src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/Vazir.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/Vazir.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 font-family: "Vazir", sans

@@ -2,13 +2,6 @@
 ---
 
 @import "{{ site.theme }}";
-$font-stack: 'Vazir', 'B Koodak', Helvetica;
-
-body {
-	font-family: $font-stack;
-}
-
-
 @font-face {
   font-family: 'Vazir';
   src: url('../fonts/Vazir.eot'); /* IE9 Compat Modes */
@@ -32,3 +25,12 @@ body {
        url('../fonts/Vazir-Bold.woff') format('woff'), /* Pretty Modern Browsers */
        url('../fonts/Vazir-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+
+$font-stack: 'Vazir', Helvetica;
+
+body {
+	font-family: $font-stack;
+}
+
+
+

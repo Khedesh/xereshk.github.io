@@ -1,13 +1,16 @@
-## خوش آمدید
+## به نام خداوند بخشنده مهربان
 
 ### Python MRO
+#### توضیحات کلی
+در پایتون الگوریتم
+MRO 
+ یا 
+(Method Resolution Order)
+مسیر جست و جوی کلاس‌ها برای یافتن تابع درست به منظور به کارگیری در هنگام صدازدن تابع کلاس‌ها در ارث‌بری چندگانه را تعیین می‌کند.
 
-You can use the [editor on GitHub](https://github.com/Khedesh/xereshk.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-
-TESTESTTESTSETESTSETSETSET
+این الگوریتم در پایتون ۲.۲ به ۲.۳ تغییراتی کرده است و به منظور نگهداری سازگاری برای استفاده از آن در پایتون ۲.۳ به بعد می بایست تا از کلاس
+object 
+ارث‌بری انجام شود.
 
 ### Markdown
 

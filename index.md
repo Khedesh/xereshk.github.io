@@ -153,7 +153,7 @@ L[C] = C + merge(AXYO, BYXO, AB)
  لذا دیگر نمی‌توانیم ادامه دهیم.
 و پایتون اجازه تشکیل کلاس را نمی‌دهد.
 ### منابع
-```markdown
+
 [Makina](https://makina-corpus.com/blog/metier/2014/python-tutorial-understanding-python-mro-class-search-path)
 [Python Docs](https://www.python.org/download/releases/2.3/mro/)
-```
+

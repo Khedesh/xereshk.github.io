@@ -73,6 +73,22 @@ class D(B,C):
     pass
 ```
 
+اکنون خروجی کد به صورت زیر خواهد بود:
+
+```markdown
+$ python2 Python-MRO.py  
+I am a B
+```
+
+در توضیح باید گفت که الگوریتم به صورت 
+DFS
+در گرافی که از ارث‌بری‌ها به وجود می‌آید عمل می‌کند و ترتیب در هر سطر از چپ به راست است.
+لذا پس از حذف تابع از 
+D
+باید شاهد آن باشیم تا تابع 
+B
+صدا شود.
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for

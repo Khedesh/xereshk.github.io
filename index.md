@@ -155,5 +155,6 @@ L[C] = C + merge(AXYO, BYXO, AB)
 ### منابع
 
 [Makina](https://makina-corpus.com/blog/metier/2014/python-tutorial-understanding-python-mro-class-search-path)
+
 [Python Docs](https://www.python.org/download/releases/2.3/mro/)
 

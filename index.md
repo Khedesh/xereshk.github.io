@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## به صفحه پاسخ تمرین تحقیق خوش آمدید
 
 You can use the [editor on GitHub](https://github.com/Khedesh/xereshk.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
